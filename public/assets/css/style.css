@@ -1,0 +1,87 @@
+.navbar .navbar-nav .nav-link {
+    color: #336D69 !important;
+    font-weight: 700 !important;
+    font-size: 25pt !important;
+}
+
+p {
+    font-size: 14pt;
+}
+
+h1 {
+    color: #336D69 !important;
+}
+
+.text-green {
+    color: #336D69 !important;
+}
+
+.btn-green {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white) !important;
+    --bs-btn-bg: #336D69 !important;
+    --bs-btn-border-color: #336D69;
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #74d6d0;
+    --bs-btn-hover-border-color: #74d6d0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #336D69;
+    --bs-btn-active-border-color: #336D69;
+}
+
+.hero {
+    background: linear-gradient(161deg, rgba(255, 255, 255, 1) 11%, rgb(167 215 213 / 88%) 100%);
+    min-height: 100vh;
+    padding-top: 8rem;
+}
+
+.hero p {
+    text-align: justify;
+}
+
+.hero h1 {
+    color: #000000 !important;
+}
+
+.hero .carousel-control-prev-icon {
+    background-image: url("../images/hero/button-prev.png");
+}
+
+.hero .carousel-control-next-icon {
+    background-image: url("../images/hero/button-next.png");
+}
+
+.pillar p {
+    text-align: justify;
+    font-size: 14pt;
+}
+
+.pillar hr {
+    border: 3px solid rgba(157, 105, 11, 0.735) !important;
+    border-radius: 5px !important;
+    width: 36%;
+    opacity: 1 !important;
+}
+
+.pillar .img-fluid {
+    max-width: 65% !important;
+}
+
+.news .card .card-body p,
+.pictures .card .card-body p {
+    font-size: 12pt;
+}
+
+footer {
+    background: url("../images/footer.png") top left no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding-top: 20%;
+}
+
+footer p,
+footer li {
+    font-size: 11pt;
+}
