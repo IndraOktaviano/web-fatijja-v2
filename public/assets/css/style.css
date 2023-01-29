@@ -59,7 +59,7 @@ h1 {
 }
 
 .pillar hr {
-    border: 3px solid rgba(157, 105, 11, 0.735) !important;
+    border: 3px solid #a29a52 !important;
     border-radius: 5px !important;
     width: 36%;
     opacity: 1 !important;
@@ -67,6 +67,11 @@ h1 {
 
 .pillar .img-fluid {
     max-width: 65% !important;
+}
+
+#q-lab {
+    background: url("../images/hero/q-lab.png");
+    background-size: cover;
 }
 
 .news .card .card-body p,

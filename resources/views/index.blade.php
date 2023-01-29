@@ -31,7 +31,12 @@
                             </div>
 
                             <div class="carousel-item">
-                                <img src="{{ asset('assets/images/hero/slide-1.png') }}" class="img-fluid"
+                                <img src="{{ asset('assets/images/hero/slide-2.png') }}" class="img-fluid"
+                                    style="height: 70vh" alt="...">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="{{ asset('assets/images/hero/slide-3.png') }}" class="img-fluid"
                                     style="height: 70vh" alt="...">
                             </div>
                         </div>
@@ -98,11 +103,23 @@
         </div>
     </div>
 
-    <div id="q-lab" class="q-lab mb-5">
-        <div class="container-fluid">
+    <div id="q-lab" class="pillar mb-5 pt-5">
+        <div class="container-fluid px-md-5">
             <div class="row">
-                <div class="col-12 p-0">
-                    <img src="{{ asset('assets/images/hero/q-lab.png') }}" class="w-100" alt="" srcset="">
+                <div class="col-12 col-md-5 py-5 text-light">
+                    <h3 class="fw-bold">Q-LAB</h3>
+                    <hr>
+                    <p>
+                        <b>Melalui Q-LAB (Quran Collaboration)</b> Fatijja Qur'an berkomitment untuk Bergerak dan Tumbuh
+                        secara Kolaboratif dengan berbagai stakeholder Fatijja Qur'an juga akan berperan sebagai Penghasil
+                        Konektifitas agar stakeholder se Asia Tenggara dapat terhubung dan bertukar kepentingan dalam dunia
+                        Qur'an.
+                    </p>
+                    {{-- <a href="" class="rounded-0 btn btn-green">Selengkapnya</a> --}}
+                </div>
+                <div class="col-12 col-md-7 d-flex justify-content-center align-items-end">
+                    <img src="{{ asset('assets/images/pillar/q-lab/picture-1.png') }}" class="img-fluid" alt=""
+                        srcset="">
                 </div>
             </div>
         </div>
@@ -116,7 +133,9 @@
                     <hr>
                     <h3 class="fw-bold">Q-GRO</h3>
                     <p>
-                        <b>Melalui Q-GRO (Quran Grounded)</b> Fatijja Qur'an berkotmitment untuk Mensyiarkan Al Qur'an Seluas luasnya dengan menjadikan platform digital sebagai tools utama dalam produksi dan publikasi konten-konten yang bermanfaat.
+                        <b>Melalui Q-GRO (Quran Grounded)</b> Fatijja Qur'an berkotmitment untuk Mensyiarkan Al Qur'an
+                        Seluas luasnya dengan menjadikan platform digital sebagai tools utama dalam produksi dan publikasi
+                        konten-konten yang bermanfaat.
                     </p>
                     <a href="" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
