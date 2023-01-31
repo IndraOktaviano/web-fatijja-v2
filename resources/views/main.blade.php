@@ -8,6 +8,7 @@
     <title>Fatijja</title>
 
     @include('partials.css')
+    @yield('css')
 </head>
 
 <body>

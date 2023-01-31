@@ -12,9 +12,9 @@
                         inovatif dirancang berdasarkan hasil riset dan bimbingan para ahli Produk didesign modern agar
                         membuat pengguna lebih nyaman saat berinteraksi dengan Al Qur'an.
                         <br>
-                        Produk Fatijja Qur'an dilengkapi fitur fitur yang memudah- kan pengguna dalam membaca,
+                        Produk Fatijja Qur'an dilengkapi fitur fitur yang memudahkan pengguna dalam membaca,
                         menghafal, mempelajari, mentadaburi dan mengamalkan Al Qur an Fatijja Qur'an hadir sebagai
-                        solusi bagi Umat Islam di Asia Tenggara terh- adap kebutuhan Al Quran.
+                        solusi bagi Umat Islam di Asia Tenggara terhadap kebutuhan Al Quran.
                     </p>
                     <a href="" class="btn btn-light shadow border border-dark fw-bold text-green"
                         style="--bs-border-opacity: .25;">
@@ -59,18 +59,18 @@
 
     <div id="q-ino" class="pillar py-5">
         <div class="container-fluid px-md-5">
-            <div class="row align-items-center">
+            <div class="row align-items-start">
                 <div class="col-12 col-md-5">
-                    <h1 class="fw-bold">Description<br>Of Pilar</h1>
-                    <hr>
+                    {{-- <h1 class="fw-bold">Description<br>Of Pilar</h1> --}}
+                    {{-- <hr> --}}
                     <h3 class="fw-bold">Q-INO</h3>
                     <p>
-                        <b>Melalui Q-INO (Quran Inovation)</b> Fatijja Qur'an berkomit- men untuk terus melahirkan
+                        <b>Melalui Q-INO (Quran Inovation)</b> Fatijja Qur'an berkomitmen untuk terus melahirkan
                         produk
-                        produk yang inovatif kreatif adaptif terhadap perkembangan zaman, dan men- jawab kebutuhan Umat
+                        produk yang inovatif kreatif adaptif terhadap perkembangan zaman, dan menjawab kebutuhan Umat
                         Islam di Asia Tenggara terhadap Al Qur'an.
                     </p>
-                    <a href="" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{url('q-ino')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
                 <div class="col-12 col-md-7 d-flex justify-content-center">
                     <img src="{{ asset('assets/images/pillar/image-1.png') }}" class="img-fluid" alt=""
@@ -84,16 +84,16 @@
         <div class="container-fluid px-md-5">
             <div class="row align-items-center">
                 <div class="col-12 col-md-5">
-                    <h1 class="fw-bold">Description<br>Of Pilar</h1>
-                    <hr>
+                    {{-- <h1 class="fw-bold">Description<br>Of Pilar</h1> --}}
+                    {{-- <hr> --}}
                     <h3 class="fw-bold">Q-EDU</h3>
                     <p>
-                        <b>Melalui Q-EDU (Quran Education)</b> Fatijja Qur'an ber- komitment untuk terlibat dalam
+                        <b>Melalui Q-EDU (Quran Education)</b> Fatijja Qur'an berkomitment untuk terlibat dalam
                         ikhtiar
                         mencerdaskan Umat Islam di Asia Tenggara dengan program. program yang Edukatif,
                         Kreatif dan Solutif.
                     </p>
-                    <a href="" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{url('/q-edu')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
                 <div class="col-12 col-md-7 d-flex justify-content-center">
                     <img src="{{ asset('assets/images/pillar/image-2.png') }}" class="img-fluid" alt=""
@@ -108,7 +108,7 @@
             <div class="row">
                 <div class="col-12 col-md-5 py-5 text-light">
                     <h3 class="fw-bold">Q-LAB</h3>
-                    <hr>
+                    {{-- <hr> --}}
                     <p>
                         <b>Melalui Q-LAB (Quran Collaboration)</b> Fatijja Qur'an berkomitment untuk Bergerak dan Tumbuh
                         secara Kolaboratif dengan berbagai stakeholder Fatijja Qur'an juga akan berperan sebagai Penghasil
@@ -129,15 +129,15 @@
         <div class="container-fluid px-md-5">
             <div class="row align-items-center">
                 <div class="col-12 col-md-5">
-                    <h1 class="fw-bold">Description<br>Of Pilar</h1>
-                    <hr>
+                    {{-- <h1 class="fw-bold">Description<br>Of Pilar</h1> --}}
+                    {{-- <hr> --}}
                     <h3 class="fw-bold">Q-GRO</h3>
                     <p>
                         <b>Melalui Q-GRO (Quran Grounded)</b> Fatijja Qur'an berkotmitment untuk Mensyiarkan Al Qur'an
                         Seluas luasnya dengan menjadikan platform digital sebagai tools utama dalam produksi dan publikasi
                         konten-konten yang bermanfaat.
                     </p>
-                    <a href="" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{url('/q-gro')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
                 <div class="col-12 col-md-7 d-flex justify-content-center">
                     <img src="{{ asset('assets/images/pillar/q-gro.png') }}" class="img-fluid" alt=""
@@ -212,6 +212,16 @@
                 <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <div class="card border-0 rounded-none">
                         <iframe height="250" src="https://www.youtube.com/embed/PYW4l7gEgNk" {{-- title="Pokok dan Batu Akan BERCAKAP".. | Ustaz Wadi Annuar"  --}}
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <div class="card border-0 rounded-none">
+                        <iframe height="250" src="https://www.youtube.com/embed/RZNsOIVcJdU" {{-- title="Pokok dan Batu Akan BERCAKAP".. | Ustaz Wadi Annuar"  --}}
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
