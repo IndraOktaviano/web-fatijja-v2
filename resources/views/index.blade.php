@@ -201,7 +201,7 @@
 
                 <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <div class="card border-0 rounded-none">
-                        <iframe height="250" src="https://www.youtube.com/embed/qT1eI9t9sqI" {{-- title="AIDIL & ATOK | FILEM PENDEK -  ARAHAN SENIWATI FAUZIAH DATO' AHMAD DAUD A.M.N" --}}
+                        <iframe height="250" src="https://www.youtube.com/embed/qT1eI9t9sqI"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
@@ -211,7 +211,7 @@
 
                 <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <div class="card border-0 rounded-none">
-                        <iframe height="250" src="https://www.youtube.com/embed/PYW4l7gEgNk" {{-- title="Pokok dan Batu Akan BERCAKAP".. | Ustaz Wadi Annuar"  --}}
+                        <iframe height="250" src="https://www.youtube.com/embed/PYW4l7gEgNk"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
@@ -221,7 +221,7 @@
 
                 <div class="col-12 col-md-4 mb-4 mb-md-0">
                     <div class="card border-0 rounded-none">
-                        <iframe height="250" src="https://www.youtube.com/embed/RZNsOIVcJdU" {{-- title="Pokok dan Batu Akan BERCAKAP".. | Ustaz Wadi Annuar"  --}}
+                        <iframe height="250" src="https://www.youtube.com/embed/RZNsOIVcJdU"
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen>
