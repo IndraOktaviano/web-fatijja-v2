@@ -21,24 +21,16 @@
                         "Bersama Merajut Keberkahan"
                     </a>
                 </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="col-12 col-md-3 d-flex justify-content-center mx-lg-auto">
                     <div id="carouselExample" class="carousel slide">
 
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ asset('assets/images/hero/slide-1.png') }}" class="img-fluid"
-                                    style="height: 70vh" alt="...">
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="{{ asset('assets/images/hero/slide-2.png') }}" class="img-fluid"
-                                    style="height: 70vh" alt="...">
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="{{ asset('assets/images/hero/slide-3.png') }}" class="img-fluid"
-                                    style="height: 70vh" alt="...">
-                            </div>
+                            @foreach ($slides as $key => $slide)
+                                <div class="carousel-item {{($key == 0) ? 'active' : ''}}">
+                                    <img src="{{ asset('assets/images/hero/'.$slide->image) }}" class="img-fluid"
+                                        style="height: 70vh" alt="...">
+                                </div>
+                            @endforeach
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -155,38 +147,24 @@
                     <p>informasi publikasi konten</p>
                 </div>
 
-                <div class="col-12 col-md-4">
-                    <div class="card border-0 rounded-none">
-                        <img src="{{ asset('assets/images/news/news-1.png') }}" class="card-img-top rounded-0"
-                            alt="{{ asset('assets/images/news/news-1.png') }}">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                        </div>
+                @foreach ($news as $item)
+                    <div class="col-12 col-md-4">
+                        <a href="{{url('news', $item->slug)}}" class="text-decoration-none">
+                            <div class="card border-0 rounded-none">
+                                <img src="{{ asset('assets/images/news/'.$item->image) }}" class="card-img-top rounded-0"
+                                    alt="{{ asset('assets/images/news/').$item->slug }}">
+                                <div class="card-body">
+                                    <h5 class="card-text text-center text-black fw-bold">{{$item->title}}</h5>
+                                </div>
+                            </div>
+                        </a>
                     </div>
+                @endforeach
+
+                <div class="col-12 d-flex justify-content-center mt-3">
+                    <a href="{{url('news')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
 
-                <div class="col-12 col-md-4">
-                    <div class="card border-0 rounded-none">
-                        <img src="{{ asset('assets/images/news/news-1.png') }}" class="card-img-top rounded-0"
-                            alt="{{ asset('assets/images/news/news-1.png') }}">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="card border-0 rounded-none">
-                        <img src="{{ asset('assets/images/news/news-1.png') }}" class="card-img-top rounded-0"
-                            alt="{{ asset('assets/images/news/news-1.png') }}">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -199,35 +177,21 @@
                     <p>Memproduksi dan mempublikasi konten video Youtube</p>
                 </div>
 
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <div class="card border-0 rounded-none">
-                        <iframe height="250" src="https://www.youtube.com/embed/qT1eI9t9sqI"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
+                @foreach ($videos as $video)
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <div class="card border-0 rounded-none">
+                            <iframe height="250" src="https://www.youtube.com/embed/{{$video->link}}"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <div class="card border-0 rounded-none">
-                        <iframe height="250" src="https://www.youtube.com/embed/PYW4l7gEgNk"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <div class="card border-0 rounded-none">
-                        <iframe height="250" src="https://www.youtube.com/embed/RZNsOIVcJdU"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
+                {{-- <div class="col-12 d-flex justify-content-center mt-3">
+                    <a href="{{url('video')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                </div> --}}
 
             </div>
         </div>
@@ -241,35 +205,18 @@
                     <p>Mempublikasi konten Foto, Infografis dan Pamflet Campaign yang berkaitan dengan Al Qur'an</p>
                 </div>
 
-                <div class="col-6 col-md-4">
-                    <div class="card border-0 rounded-none">
-                        <img src="{{ asset('assets/images/picture-g/picture-1.png') }}" class="card-img-top rounded-0"
-                            alt="{{ asset('assets/images/news/news-1.png') }}">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Contoh</h4>
+                @foreach ($pictures as $picture)
+                    <div class="col-6 col-md-4">
+                        <div class="card border-0 rounded-none">
+                            <img src="{{ asset('assets/images/picture-g/'.$picture->image) }}" class="card-img-top rounded-0"
+                                alt="{{ $picture->title }}">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">{{ $picture->title }}</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="col-6 col-md-4">
-                    <div class="card border-0 rounded-none">
-                        <img src="{{ asset('assets/images/picture-g/picture-1.png') }}" class="card-img-top rounded-0"
-                            alt="{{ asset('assets/images/news/news-1.png') }}">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Contoh</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-4">
-                    <div class="card border-0 rounded-none">
-                        <img src="{{ asset('assets/images/picture-g/picture-1.png') }}" class="card-img-top rounded-0"
-                            alt="{{ asset('assets/images/news/news-1.png') }}">
-                        <div class="card-body">
-                            <h4 class="card-title text-center">Contoh</h4>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
