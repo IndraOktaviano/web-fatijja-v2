@@ -23,6 +23,11 @@
                 <li class="{{Request::is('admin/picture') ? 'active' : ''}}">
                     <a href="{{route('admin.picture.index')}}"> <i class="menu-icon fa fa-list"></i>List Gambar</a>
                 </li>
+
+                <li class="menu-title">Slide</li><!-- /.menu-title -->
+                <li class="{{Request::is('admin/slide') ? 'active' : ''}}">
+                    <a href="{{route('admin.slide.index')}}"> <i class="menu-icon fa fa-list"></i>List Slide</a>
+                </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>

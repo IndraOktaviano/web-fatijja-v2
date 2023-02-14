@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Picture;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\File;
+
 class PictureController extends Controller
 {
     public function index()
@@ -51,13 +53,13 @@ class PictureController extends Controller
 
     public function edit(Picture $picture)
     {
-        //
+        $data['pictures'] = Picture::orderBy('created_at', 'asc')->get();
+        $data['edit'] = $picture;
+        return view('admin.picture.index', $data);
     }
 
     public function update(Request $request, Picture $picture)
     {
-        $picture = new Picture;
-
         // simpan gambar ke directory
         if ($request->hasFile('image')) {
             // hapus file lama

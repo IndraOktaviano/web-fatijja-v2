@@ -27,7 +27,7 @@
                         <div class="carousel-inner">
                             @foreach ($slides as $key => $slide)
                                 <div class="carousel-item {{($key == 0) ? 'active' : ''}}">
-                                    <img src="{{ asset('assets/images/hero/'.$slide->image) }}" class="img-fluid"
+                                    <img src="{{ asset('assets/images/hero/slide/'.$slide->image) }}" class="img-fluid"
                                         style="height: 70vh" alt="...">
                                 </div>
                             @endforeach

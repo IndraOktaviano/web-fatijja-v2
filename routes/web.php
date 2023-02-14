@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 use App\Http\Controllers\Admin\PictureController as AdminPictureController;
+use App\Http\Controllers\Admin\SlideController as AdminSlideController;
 use App\Http\Controllers\Admin\VideoController as AdminVideoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
@@ -43,4 +44,5 @@ Route::prefix('admin')->as('admin.')->group(function () {
     Route::resource('news', AdminNewsController::class);
     Route::resource('video', AdminVideoController::class);
     Route::resource('picture', AdminPictureController::class);
+    Route::resource('slide', AdminSlideController::class);
 });
