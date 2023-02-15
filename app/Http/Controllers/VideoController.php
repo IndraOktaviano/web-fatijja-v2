@@ -9,6 +9,6 @@ class VideoController extends Controller
     public function index()
     {
         $data['videos'] = Video::all();
-        return view('video', $data);
+        return view('video.index', $data);
     }
 }

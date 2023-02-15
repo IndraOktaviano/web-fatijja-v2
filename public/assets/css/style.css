@@ -1,7 +1,7 @@
 .navbar .navbar-nav .nav-link {
     color: #336D69 !important;
     font-weight: 700 !important;
-    font-size: 25pt !important;
+    font-size: 15pt !important;
 }
 
 p {
@@ -89,4 +89,11 @@ footer {
 footer p,
 footer li {
     font-size: 11pt;
+}
+
+
+@media only screen and (max-width: 768px) {
+    footer {
+        background: url("../images/footer-2.png") top left no-repeat;
+    }
 }

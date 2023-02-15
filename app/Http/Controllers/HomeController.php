@@ -13,8 +13,8 @@ class HomeController extends Controller
     {
         $data['slides'] = Slide::all();
         $data['news'] = News::orderBy('created_at', 'asc')->take(3)->get();
-        $data['videos'] = Video::orderBy('created_at', 'asc')->get();
-        $data['pictures'] = Picture::orderBy('created_at', 'asc')->get();
+        $data['videos'] = Video::orderBy('created_at', 'asc')->take(3)->get();
+        $data['pictures'] = Picture::orderBy('created_at', 'asc')->take(3)->get();
         return view('index', $data);
     }
 }

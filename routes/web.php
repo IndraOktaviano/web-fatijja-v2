@@ -7,7 +7,9 @@ use App\Http\Controllers\Admin\SlideController as AdminSlideController;
 use App\Http\Controllers\Admin\VideoController as AdminVideoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PictureController;
 use App\Http\Controllers\VideoController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,8 +40,11 @@ Route::get('q-edu', function () {
 Route::get('news', [NewsController::class, 'index']);
 Route::get('news/{news}', [NewsController::class, 'show']);
 Route::get('video', [VideoController::class, 'index']);
+Route::get('picture', [PictureController::class, 'index']);
 
-Route::prefix('admin')->as('admin.')->group(function () {
+Auth::routes();
+
+Route::middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {
     Route::resource('/', AdminHomeController::class);
     Route::resource('news', AdminNewsController::class);
     Route::resource('video', AdminVideoController::class);

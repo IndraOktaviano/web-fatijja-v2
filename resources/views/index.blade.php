@@ -189,9 +189,9 @@
                     </div>
                 @endforeach
 
-                {{-- <div class="col-12 d-flex justify-content-center mt-3">
+                <div class="col-12 d-flex justify-content-center mt-3">
                     <a href="{{url('video')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
-                </div> --}}
+                </div>
 
             </div>
         </div>
@@ -216,6 +216,10 @@
                         </div>
                     </div>
                 @endforeach
+
+                <div class="col-12 d-flex justify-content-center mt-3">
+                    <a href="{{url('picture')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                </div>
 
             </div>
         </div>
