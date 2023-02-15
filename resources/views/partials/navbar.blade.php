@@ -1,5 +1,4 @@
-{{-- <nav id="navbar" class="navbar navbar-expand-lg {{ Request::is('/') ? 'fixed-top' : '' }}"> --}}
-<nav id="navbar" class="navbar navbar-expand-lg {{ Request::is('/') ? '' : '' }}">
+<nav id="navbar" class="navbar navbar-expand-lg {{ Request::is('/') ? 'fixed-top' : '' }}">
     <div class="container-fluid px-md-5">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Fatijja" height="40">
