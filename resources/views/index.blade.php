@@ -26,8 +26,8 @@
 
                         <div class="carousel-inner">
                             @foreach ($slides as $key => $slide)
-                                <div class="carousel-item {{($key == 0) ? 'active' : ''}}">
-                                    <img src="{{ asset('assets/images/hero/slide/'.$slide->image) }}" class="img-fluid"
+                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                    <img src="{{ asset('assets/images/hero/slide/' . $slide->image) }}" class="img-fluid"
                                         style="height: 70vh" alt="...">
                                 </div>
                             @endforeach
@@ -62,7 +62,7 @@
                         produk yang inovatif kreatif adaptif terhadap perkembangan zaman, dan menjawab kebutuhan Umat
                         Islam di Asia Tenggara terhadap Al Qur'an.
                     </p>
-                    <a href="{{url('q-ino')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{ url('q-ino') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
                 <div class="col-12 col-md-7 d-flex justify-content-center">
                     <img src="{{ asset('assets/images/pillar/image-1.png') }}" class="img-fluid" alt=""
@@ -85,7 +85,7 @@
                         mencerdaskan Umat Islam di Asia Tenggara dengan program. program yang Edukatif,
                         Kreatif dan Solutif.
                     </p>
-                    <a href="{{url('/q-edu')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{ url('/q-edu') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
                 <div class="col-12 col-md-7 d-flex justify-content-center">
                     <img src="{{ asset('assets/images/pillar/image-2.png') }}" class="img-fluid" alt=""
@@ -117,6 +117,22 @@
         </div>
     </div>
 
+    <div id="banner-carousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{asset('assets/images/hero/banner-web.png')}}" class="d-block w-100" alt="{{asset('assets/images/hero/banner-web.png')}}">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
     <div id="q-gro" class="pillar py-5">
         <div class="container-fluid px-md-5">
             <div class="row align-items-center">
@@ -129,7 +145,7 @@
                         Seluas luasnya dengan menjadikan platform digital sebagai tools utama dalam produksi dan publikasi
                         konten-konten yang bermanfaat.
                     </p>
-                    <a href="{{url('/q-gro')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{ url('/q-gro') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
                 <div class="col-12 col-md-7 d-flex justify-content-center">
                     <img src="{{ asset('assets/images/pillar/q-gro.png') }}" class="img-fluid" alt=""
@@ -149,12 +165,12 @@
 
                 @foreach ($news as $item)
                     <div class="col-12 col-md-4">
-                        <a href="{{url('news', $item->slug)}}" class="text-decoration-none">
+                        <a href="{{ url('news', $item->slug) }}" class="text-decoration-none">
                             <div class="card border-0 rounded-none">
-                                <img src="{{ asset('assets/images/news/'.$item->image) }}" class="card-img-top rounded-0"
-                                    alt="{{ asset('assets/images/news/').$item->slug }}">
+                                <img src="{{ asset('assets/images/news/' . $item->image) }}" class="card-img-top rounded-0"
+                                    alt="{{ asset('assets/images/news/') . $item->slug }}">
                                 <div class="card-body">
-                                    <h5 class="card-text text-center text-black fw-bold">{{$item->title}}</h5>
+                                    <h5 class="card-text text-center text-black fw-bold">{{ $item->title }}</h5>
                                 </div>
                             </div>
                         </a>
@@ -162,7 +178,7 @@
                 @endforeach
 
                 <div class="col-12 d-flex justify-content-center mt-3">
-                    <a href="{{url('news')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{ url('news') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
 
             </div>
@@ -180,7 +196,7 @@
                 @foreach ($videos as $video)
                     <div class="col-12 col-md-4 mb-4 mb-md-0">
                         <div class="card border-0 rounded-none">
-                            <iframe height="250" src="https://www.youtube.com/embed/{{$video->link}}"
+                            <iframe height="250" src="https://www.youtube.com/embed/{{ $video->link }}"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen>
@@ -190,7 +206,7 @@
                 @endforeach
 
                 <div class="col-12 d-flex justify-content-center mt-3">
-                    <a href="{{url('video')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{ url('video') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
 
             </div>
@@ -208,8 +224,8 @@
                 @foreach ($pictures as $picture)
                     <div class="col-6 col-md-4">
                         <div class="card border-0 rounded-none">
-                            <img src="{{ asset('assets/images/picture-g/'.$picture->image) }}" class="card-img-top rounded-0"
-                                alt="{{ $picture->title }}">
+                            <img src="{{ asset('assets/images/picture-g/' . $picture->image) }}"
+                                class="card-img-top rounded-0" alt="{{ $picture->title }}">
                             <div class="card-body">
                                 <h4 class="card-title text-center">{{ $picture->title }}</h4>
                             </div>
@@ -218,7 +234,7 @@
                 @endforeach
 
                 <div class="col-12 d-flex justify-content-center mt-3">
-                    <a href="{{url('picture')}}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                    <a href="{{ url('picture') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
                 </div>
 
             </div>

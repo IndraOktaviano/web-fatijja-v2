@@ -2,29 +2,13 @@
     <div class="container-fluid px-md-5">
         <div class="row">
 
-            <div class="col-6 col-md-2 mb-3 mb-md-0">
-                <img src="{{ asset('assets/images/logo.png') }}" class="img-fluid">
+            <div class="col-12 col-md-2 mb-3 mb-md-0 d-flex align-items-center px-5 px-md-0">
+                <img src="{{ asset('assets/images/logo-white.png') }}" class="img-fluid">
             </div>
 
             <div class="col-12 col-md-6 mb-3 mb-md-0">
 
                 <div class="row">
-                    <p class="col-2 mb-0">Telepon</p>
-                    <p class="col-10 mb-0">
-                        : <a href="tel:+622126961384" class="text-decoration-none text-light">021 2696 1384</a>
-                    </p>
-
-                    <p class="col-2 mb-0">CS</p>
-                    <p class="col-10 mb-0">
-                        : <a href="tel:+6281281080631" class="text-decoration-none text-light">0812 8108 0631</a>
-                    </p>
-
-                    <p class="col-2 mb-0">Email</p>
-                    <p class="col-10 mb-0">
-                        : <a href="mailto:fatijjacetakdivision@gmail.com"
-                            class="text-decoration-none text-light">fatijjacetakdivision@gmail.com</a>
-                    </p>
-
                     <p class="col-2 mb-0">Kantor</p>
                     <p class="col-10 mb-0">
                         : <a href="https://www.google.com/maps?q=-6.2550266,106.8596609" target="_blank"
@@ -32,6 +16,22 @@
                             Jl. Binawarga No. 19 RT06 /
                             RW07, Rajawati, Kec. Pancoran, Jakarta Selatan, DKI Jakarta 12750
                         </a>
+                    </p>
+
+                    <p class="col-2 mb-0">Telepon</p>
+                    <p class="col-10 mb-0">
+                        : <a href="tel:+6282126963263" class="text-decoration-none text-light">0821 2696 3263</a>
+                    </p>
+
+                    <p class="col-2 mb-0">CS</p>
+                    <p class="col-10 mb-0">
+                        : <a href="https://wa.me/+6281281080631" class="text-decoration-none text-light">0812 8108 0631</a>
+                    </p>
+
+                    <p class="col-2 mb-0">Email</p>
+                    <p class="col-10 mb-0">
+                        : <a href="mailto:fatijjanusantarainovasi@gmail.com"
+                            class="text-decoration-none text-light">fatijjanusantarainovasi@gmail.com</a>
                     </p>
 
                 </div>

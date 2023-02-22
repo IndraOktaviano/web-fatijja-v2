@@ -45,11 +45,11 @@ h1 {
     color: #000000 !important;
 }
 
-.hero .carousel-control-prev-icon {
+.hero .carousel-control-prev-icon, #banner-carousel .carousel-control-prev-icon {
     background-image: url("../images/hero/button-prev.png");
 }
 
-.hero .carousel-control-next-icon {
+.hero .carousel-control-next-icon, #banner-carousel .carousel-control-next-icon {
     background-image: url("../images/hero/button-next.png");
 }
 
@@ -80,10 +80,11 @@ h1 {
 }
 
 footer {
-    background: url("../images/footer.png") top left no-repeat;
-    background-size: cover;
+    /* background: url("../images/footer.png") top left no-repeat;
+    background-size: cover; */
+    background-color: #336D69;
     color: #fff;
-    padding-top: 20%;
+    padding-top: 1%;
 }
 
 footer p,
@@ -92,8 +93,8 @@ footer li {
 }
 
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     footer {
         background: url("../images/footer-2.png") top left no-repeat;
     }
-}
+} */
