@@ -16,10 +16,10 @@
                         menghafal, mempelajari, mentadaburi dan mengamalkan Al Qur an Fatijja Qur'an hadir sebagai
                         solusi bagi Umat Islam di Asia Tenggara terhadap kebutuhan Al Quran.
                     </p>
-                    <a href="" class="btn btn-light shadow border border-dark fw-bold text-green"
-                        style="--bs-border-opacity: .25;">
+                    <p class="btn btn-light shadow border border-dark fw-bold text-green"
+                        style="--bs-border-opacity: .25; cursor: context-menu; --bs-btn-hover-bg: #f8f9fa; --bs-btn-active-bg: #f8f9fa;">
                         "Bersama Merajut Keberkahan"
-                    </a>
+                    </p>
                 </div>
                 <div class="col-12 col-md-3 d-flex justify-content-center mx-lg-auto">
                     <div id="carouselExample" class="carousel slide">
@@ -95,6 +95,28 @@
         </div>
     </div>
 
+    <div id="q-gro" class="pillar py-5">
+        <div class="container-fluid px-md-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-5">
+                    {{-- <h1 class="fw-bold">Description<br>Of Pilar</h1> --}}
+                    {{-- <hr> --}}
+                    <h3 class="fw-bold">Q-GRO</h3>
+                    <p>
+                        <b>Melalui Q-GRO (Quran Grounded)</b> Fatijja Qur'an berkotmitment untuk Mensyiarkan Al Qur'an
+                        Seluas luasnya dengan menjadikan platform digital sebagai tools utama dalam produksi dan publikasi
+                        konten-konten yang bermanfaat.
+                    </p>
+                    <a href="{{ url('/q-gro') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
+                </div>
+                <div class="col-12 col-md-7 d-flex justify-content-center">
+                    <img src="{{ asset('assets/images/pillar/q-gro.png') }}" class="img-fluid" alt=""
+                        srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="q-lab" class="pillar mb-5 pt-5">
         <div class="container-fluid px-md-5">
             <div class="row">
@@ -117,42 +139,22 @@
         </div>
     </div>
 
-    <div id="banner-carousel" class="carousel slide">
+    <div id="banner-carousel" class="carousel slide mb-md-4">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{asset('assets/images/hero/banner-web.png')}}" class="d-block w-100" alt="{{asset('assets/images/hero/banner-web.png')}}">
-            </div>
+            @foreach ($banners as $key => $banner)
+                <div class="carousel-item {{($key == 0) ? 'active' : ''}}">
+                    <img src="{{asset('assets/images/hero/banner/'.$banner->image)}}" class="d-block w-100" alt="{{asset('assets/images/hero/banner/'.$banner->image)}}">
+                </div>
+            @endforeach
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#banner-carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#banner-carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
-
-    <div id="q-gro" class="pillar py-5">
-        <div class="container-fluid px-md-5">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-5">
-                    {{-- <h1 class="fw-bold">Description<br>Of Pilar</h1> --}}
-                    {{-- <hr> --}}
-                    <h3 class="fw-bold">Q-GRO</h3>
-                    <p>
-                        <b>Melalui Q-GRO (Quran Grounded)</b> Fatijja Qur'an berkotmitment untuk Mensyiarkan Al Qur'an
-                        Seluas luasnya dengan menjadikan platform digital sebagai tools utama dalam produksi dan publikasi
-                        konten-konten yang bermanfaat.
-                    </p>
-                    <a href="{{ url('/q-gro') }}" class="rounded-0 btn btn-green">Selengkapnya</a>
-                </div>
-                <div class="col-12 col-md-7 d-flex justify-content-center">
-                    <img src="{{ asset('assets/images/pillar/q-gro.png') }}" class="img-fluid" alt=""
-                        srcset="">
-                </div>
-            </div>
-        </div>
     </div>
 
     <div id="news" class="news mb-5">

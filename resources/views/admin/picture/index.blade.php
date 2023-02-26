@@ -38,7 +38,7 @@
                                 <input type="file" id="image" name="image" value="{{ isset($edit) ? $edit->image : '' }}" class="form-control">
                             </div>
                         </div>
-                        <div class="input-group-btn"><button type="submit" class="btn btn-primary">Simpan</button></div>
+                        <div class="input-group-btn"><button type="submit" class="btn btn-primary mb-3">Simpan</button></div>
 
                     </form>
                     <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -55,7 +55,9 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $item->title }}</td>
-                                    <td>{{ $item->image }}</td>
+                                    <td>
+                                        <img src="{{ asset('assets/images/picture-g/'.$item->image) }}" width="100" alt="" srcset="">
+                                    </td>
                                     <td>
                                         <a href="{{ route('admin.picture.edit', $item->id) }}" class="btn btn-primary">Ubah</a>
                                         <a class="btn btn-danger text-light" onclick="event.preventDefault();document.getElementById('delete-form-{{ $item->id }}').submit();">Hapus</a>

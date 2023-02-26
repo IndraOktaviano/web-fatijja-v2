@@ -12,7 +12,7 @@ class SlideController extends Controller
 {
     public function index()
     {
-        $data['slides'] = Slide::all();
+        $data['slides'] = Slide::orderBy('created_at', 'desc')->get();
         return view('admin.slide.index', $data);
     }
 
@@ -52,7 +52,7 @@ class SlideController extends Controller
 
     public function edit(Slide $slide)
     {
-        $data['slides'] = Slide::orderBy('created_at', 'asc')->get();
+        $data['slides'] = Slide::orderBy('created_at', 'desc')->get();
         $data['edit'] = $slide;
         return view('admin.slide.index', $data);
     }

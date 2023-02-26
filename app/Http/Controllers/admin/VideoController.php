@@ -10,7 +10,7 @@ class VideoController extends Controller
 {
     public function index()
     {
-        $data['videos'] = Video::orderBy('created_at', 'asc')->get();
+        $data['videos'] = Video::orderBy('created_at', 'desc')->get();
         return view('admin.video.index', $data);
     }
 
@@ -40,7 +40,8 @@ class VideoController extends Controller
 
     public function edit(Video $video)
     {
-        $data['videos'] = Video::orderBy('created_at', 'asc')->get();
+        dd($video);
+        $data['videos'] = Video::orderBy('created_at', 'desc')->get();
         $data['edit'] = $video;
         return view('admin.video.index', $data);
     }

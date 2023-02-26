@@ -20,7 +20,7 @@
 
                     <p class="col-2 mb-0">Telepon</p>
                     <p class="col-10 mb-0">
-                        : <a href="tel:+6282126963263" class="text-decoration-none text-light">0821 2696 3263</a>
+                        : <a href="tel:+622126963263" class="text-decoration-none text-light">021 2696 3263</a>
                     </p>
 
                     <p class="col-2 mb-0">CS</p>

@@ -12,7 +12,7 @@ class PictureController extends Controller
 {
     public function index()
     {
-        $data['pictures'] = Picture::all();
+        $data['pictures'] = Picture::orderBy('created_at', 'desc')->get();
         return view('admin.picture.index', $data);
     }
 

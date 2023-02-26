@@ -47,7 +47,9 @@
                             @foreach ($slides as $key => $item)
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
-                                    <td>{{ $item->image }}</td>
+                                    <td>
+                                        <img src="{{ asset('assets/images/hero/slide/'.$item->image) }}" width="100" alt="">
+                                    </td>
                                     <td>
                                         <a href="{{ route('admin.slide.edit', $item->id) }}" class="btn btn-primary">Ubah</a>
                                         <a class="btn btn-danger text-light" onclick="event.preventDefault();document.getElementById('delete-form-{{ $item->id }}').submit();">Hapus</a>

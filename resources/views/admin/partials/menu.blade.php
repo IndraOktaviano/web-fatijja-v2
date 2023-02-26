@@ -16,17 +16,23 @@
 
                 <li class="menu-title">Video</li><!-- /.menu-title -->
                 <li class="{{Request::is('admin/video') ? 'active' : ''}}">
-                    <a href="{{route('admin.video.index')}}"> <i class="menu-icon fa fa-list"></i>List Video</a>
+                    <a href="{{route('admin.video.index')}}"> <i class="menu-icon fa fa-list"></i>Videos Grounded</a>
                 </li>
 
                 <li class="menu-title">Gambar</li><!-- /.menu-title -->
                 <li class="{{Request::is('admin/picture') ? 'active' : ''}}">
-                    <a href="{{route('admin.picture.index')}}"> <i class="menu-icon fa fa-list"></i>List Gambar</a>
+                    <a href="{{route('admin.picture.index')}}"> <i class="menu-icon fa fa-list"></i>Picture Grounded</a>
+                </li>
+                <li class="{{Request::is('admin/qlab') ? 'active' : ''}}">
+                    <a href="{{route('admin.qlab.index')}}"> <i class="menu-icon fa fa-list"></i>Q-Lab</a>
                 </li>
 
                 <li class="menu-title">Slide</li><!-- /.menu-title -->
                 <li class="{{Request::is('admin/slide') ? 'active' : ''}}">
-                    <a href="{{route('admin.slide.index')}}"> <i class="menu-icon fa fa-list"></i>List Slide</a>
+                    <a href="{{route('admin.slide.index')}}"> <i class="menu-icon fa fa-list"></i>Hero Slide</a>
+                </li>
+                <li class="{{Request::is('admin/banner') ? 'active' : ''}}">
+                    <a href="{{route('admin.banner.index')}}"> <i class="menu-icon fa fa-list"></i>Banner Website</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
