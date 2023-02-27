@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid" id="q-lab-full">
         <div class="row">
             @foreach ($qlab as $item)
                 <div class="col-6 col-md-3 mb-3">

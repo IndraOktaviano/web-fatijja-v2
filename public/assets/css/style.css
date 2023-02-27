@@ -74,6 +74,16 @@ h1 {
     background-size: cover;
 }
 
+#q-lab-full .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+#q-lab-full h6 {
+    font-size: 0.8rem;
+}
+
 .news .card .card-body p,
 .pictures .card .card-body p {
     font-size: 12pt;
