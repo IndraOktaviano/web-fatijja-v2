@@ -6,10 +6,14 @@
     };
 
     function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        if (window.innerWidth < 768) {
             document.getElementById("navbar").style.background = "#fff";
         } else {
-            document.getElementById("navbar").style.background = "none";
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").style.background = "#fff";
+            } else {
+                document.getElementById("navbar").style.background = "none";
+            }
         }
     }
 </script>

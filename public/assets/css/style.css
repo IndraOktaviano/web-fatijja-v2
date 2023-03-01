@@ -1,7 +1,7 @@
 .navbar .navbar-nav .nav-link {
     color: #336D69 !important;
     font-weight: 700 !important;
-    font-size: 15pt !important;
+    font-size: 13pt !important;
 }
 
 p {
@@ -38,7 +38,7 @@ h1 {
 }
 
 .hero p {
-    text-align: justify;
+    text-align: left;
 }
 
 .hero h1 {
@@ -54,7 +54,7 @@ h1 {
 }
 
 .pillar p {
-    text-align: justify;
+    text-align: left;
     font-size: 14pt;
 }
 

@@ -10,22 +10,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item me-md-3">
                     <a class="nav-link" href="{{ url('/') }}">HOME</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-md-3">
                     <a class="nav-link" href="{{ url('/q-ino') }}">Q-INO</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-md-3">
                     <a class="nav-link" href="{{ url('/q-edu') }}">Q-EDU</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-md-3">
                     <a class="nav-link" href="{{ url('/q-lab') }}">Q-LAB</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-md-3">
                     <a class="nav-link" href="{{ url('/q-gro') }}">Q-GRO</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-md-3">
                     <a class="nav-link" href="#footer">CONTACT</a>
                 </li>
             </ul>
