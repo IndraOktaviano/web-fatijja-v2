@@ -35,7 +35,9 @@ class NewsController extends Controller
 
         // buat slug berdasarkan judul
         $random = Str::random(15);
-        $slug = strtolower(str_replace(' ', '-', $request->title.'-'.$random));
+        $string = strtolower(str_replace(["'", '"'], '', $request->title));
+        $string = strtolower(str_replace(' ', '-', $string));
+        $slug = $string.'-'.$random;
 
         // data yang ingin disimpan
         $news->title = $request->title;
@@ -86,7 +88,9 @@ class NewsController extends Controller
 
         // buat slug berdasarkan judul
         $random = Str::random(15);
-        $slug = strtolower(str_replace(' ', '-', $request->title.'-'.$random));
+        $string = strtolower(str_replace(["'", '"'], '', $request->title));
+        $string = strtolower(str_replace(' ', '-', $string));
+        $slug = $string.'-'.$random;
 
         // data yang ingin diubah
         $news->title = $request->title;

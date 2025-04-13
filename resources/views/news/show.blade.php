@@ -1,5 +1,14 @@
 @extends('main')
 
+@section('css')
+    <style>
+        .img-fluid {
+            max-width: 50%;
+            height: auto;
+        }
+    </style>
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row mt-md-5">
@@ -12,7 +21,7 @@
             </div>
 
             {{-- gambar berita --}}
-            <div class="col-12 mb-3">
+            <div class="col-12 mb-3 text-center">
                 <img src="{{ asset('assets/images/news/' . $news->image) }}" alt="" class="img-fluid">
             </div>
 

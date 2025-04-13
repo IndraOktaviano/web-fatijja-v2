@@ -48,7 +48,7 @@ Route::get('picture', [PictureController::class, 'index']);
 
 Auth::routes();
 
-Route::domain('admin.' . env('APP_URL'))->middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {
+Route::middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {
     Route::resource('/', AdminHomeController::class);
     Route::resource('news', AdminNewsController::class);
     Route::resource('video', AdminVideoController::class);
